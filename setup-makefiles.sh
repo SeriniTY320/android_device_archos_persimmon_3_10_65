@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DEVICE=persimmon
-VENDOR=archos
+DEVICE=prime_l
+VENDOR=highscreen
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
