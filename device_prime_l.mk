@@ -6,16 +6,16 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Off ninja
 USE_NINJA=false
 
-$(call inherit-product-if-exists, vendor/archos/persimmon/persimmon-vendor.mk)
+$(call inherit-product-if-exists, vendor/highscreen/prime_l/prime_l-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/archos/persimmon/overlay
+DEVICE_PACKAGE_OVERLAYS += device/highscreen/prime_l/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/archos/persimmon/prebuilt/Image.gz-dtb
+    LOCAL_KERNEL := device/highscreen/prime_l/prebuilt/Image.gz-dtb
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -25,26 +25,26 @@ endif
 TARGET_PROVIDES_INIT_RC := true
 
 PRODUCT_COPY_FILES += \
-    device/archos/persimmon/rootdir/init.rc:root/init.rc \
-    device/archos/persimmon/rootdir/init.target.rc:root/init.target.rc \
-    device/archos/persimmon/rootdir/init.mt6735.rc:root/init.mt6735.rc \
-    device/archos/persimmon/rootdir/init.ssd.rc:root/init.ssd.rc \
-    device/archos/persimmon/rootdir/init.xlog.rc:root/init.xlog.rc \
-    device/archos/persimmon/rootdir/init.usb.rc:root/init.usb.rc \
-    device/archos/persimmon/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
-    device/archos/persimmon/rootdir/init.aee.rc:root/init.aee.rc \
-    device/archos/persimmon/rootdir/init.project.rc:root/init.project.rc \
-    device/archos/persimmon/rootdir/init.modem.rc:root/init.modem.rc \
-    device/archos/persimmon/rootdir/init.trace.rc:root/init.trace.rc \
-    device/archos/persimmon/rootdir/fstab.mt6735:root/fstab.mt6735 \
-    device/archos/persimmon/rootdir/fstab.swap:root/fstab.swap \
-    device/archos/persimmon/rootdir/ueventd.rc:root/ueventd.rc \
-    device/archos/persimmon/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    device/archos/persimmon/etc/init/audioserver.rc:system/etc/init/audioserver.rc \
-    device/archos/persimmon/etc/init/mediacodec.rc:system/etc/init/mediacodec.rc \
-    device/archos/persimmon/etc/init/cameraserver.rc:system/etc/init/cameraserver.rc \
-    device/archos/persimmon/etc/init/rild.rc:system/etc/init/rild.rc \
-    device/archos/persimmon/media_profiles.xml:system/etc/media_profiles.xml \
+    device/highscreen/prime_l/rootdir/init.rc:root/init.rc \
+    device/highscreen/prime_l/rootdir/init.target.rc:root/init.target.rc \
+    device/highscreen/prime_l/rootdir/init.mt6735.rc:root/init.mt6735.rc \
+    device/highscreen/prime_l/rootdir/init.ssd.rc:root/init.ssd.rc \
+    device/highscreen/prime_l/rootdir/init.xlog.rc:root/init.xlog.rc \
+    device/highscreen/prime_l/rootdir/init.usb.rc:root/init.usb.rc \
+    device/highscreen/prime_l/rootdir/init.mt6735.usb.rc:root/init.mt6735.usb.rc \
+    device/highscreen/prime_l/rootdir/init.aee.rc:root/init.aee.rc \
+    device/highscreen/prime_l/rootdir/init.project.rc:root/init.project.rc \
+    device/highscreen/prime_l/rootdir/init.modem.rc:root/init.modem.rc \
+    device/highscreen/prime_l/rootdir/init.trace.rc:root/init.trace.rc \
+    device/highscreen/prime_l/rootdir/fstab.mt6735:root/fstab.mt6735 \
+    device/highscreen/prime_l/rootdir/fstab.swap:root/fstab.swap \
+    device/highscreen/prime_l/rootdir/ueventd.rc:root/ueventd.rc \
+    device/highscreen/prime_l/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    device/highscreen/prime_l/etc/init/audioserver.rc:system/etc/init/audioserver.rc \
+    device/highscreen/prime_l/etc/init/mediacodec.rc:system/etc/init/mediacodec.rc \
+    device/highscreen/prime_l/etc/init/cameraserver.rc:system/etc/init/cameraserver.rc \
+    device/highscreen/prime_l/etc/init/rild.rc:system/etc/init/rild.rc \
+    device/highscreen/prime_l/media_profiles.xml:system/etc/media_profiles.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
@@ -110,7 +110,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    device/archos/persimmon/rootdir/etc/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
+    device/highscreen/prime_l/rootdir/etc/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
 
 # Audio componets from source
 PRODUCT_PACKAGES += \
@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
 
 # BT A2DP
 #PRODUCT_COPY_FILES += \
-#    vendor/archos/persimmon/proprietary/vendor/lib/hw/audio.a2dp.blueangel.so:system/vendor/lib/hw/audio.a2dp.mt6735.so
+#    vendor/highscreen/prime_l/proprietary/vendor/lib/hw/audio.a2dp.blueangel.so:system/vendor/lib/hw/audio.a2dp.mt6735.so
 
 # Audio components from source
 PRODUCT_PACKAGES += \
@@ -131,16 +131,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/ndk/current/sources/cxx-stl/stlport/libs/armeabi-v7a/libstlport_shared.so:system/lib/libstlport.so
 
-#PRODUCT_EXTRA_RECOVERY_KEYS += device/archos/persimmon/archos
+#PRODUCT_EXTRA_RECOVERY_KEYS += device/highscreen/prime_l/archos
 
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 #$(call inherit-product, build/target/product/aosp_arm64.mk)
 
-#PRODUCT_NAME := cm_persimmon
-#PRODUCT_DEVICE := persimmon
+#PRODUCT_NAME := cm_prime_l
+#PRODUCT_DEVICE := prime_l
 #PRODUCT_BRAND := CyaniogenMod
-#PRODUCT_MODEL := CyaniogenMod on Archos persimmon
+#PRODUCT_MODEL := CyaniogenMod on Highscreen Prime L
 
 # These additionals go to /default.prop
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 \
@@ -199,19 +199,6 @@ cm.updater.uri=https://raw.githubusercontent.com/divis1969/update-site/master/up
 #ro.hwui.text_large_cache_height=1024 \
 #ro.bq.num_of_layer_used_by_sf=4 \
 #persist.sys.timezone=Asia/Shanghai \
-#persist.sys.archos.region=cn \
-#persist.sys.archos.codepage=gbk \
-#ro.archos.setupwizard.flyme=true \
-#ro.archos.setupwizard.setlang=true \
-#ro.archos.region.enable=true \
-#ro.archos.contactmsg.auth=false \
-#ro.archos.customize.pccw=false \
-#ro.archos.autorecorder=true \
-#ro.archos.visualvoicemail=true \
-#ro.archos.security=false \
-#ro.archos.permanentkey=false \
-#ro.archos.sip.support=true \
-#ro.archos.voip.support=false \
 #sys.archos.m35x.white.config=false \
 #sys.archos.white.config=false \
 #persist.sys.log-main.enable=0 \
@@ -345,5 +332,3 @@ cm.updater.uri=https://raw.githubusercontent.com/divis1969/update-site/master/up
 #dalvik.vm.dexopt-flags=m=y \
 #net.bt.name=Android \
 #dalvik.vm.stack-trace-file=/data/anr/traces.txt \
-
-
