@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export DEVICE=persimmon
-export VENDOR=archos
+export DEVICE=prime_l
+export VENDOR=highscreen
 
 if [ $# -eq 0 ]; then
   SRC=adb
