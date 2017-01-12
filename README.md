@@ -1,8 +1,8 @@
-Device repository for Archos 50 Cobalt (CyanogenMod)
+Device repository for Highscreen Prime L (CyanogenMod)
 ===========================
 For Stock 3.10.65 kernel
 
-Это дерево создано на основе работы @divis1969 , без него ничего бы не было.
+Это дерево создано на основе работы @divis1969 и @olegsvs , без них ничего бы не было. 
 
 Getting Started
 ---------------
