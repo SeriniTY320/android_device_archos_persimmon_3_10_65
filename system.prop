@@ -1,5 +1,5 @@
 #
-# system.prop for persimmon
+# system.prop for prime_l
 #
 # !!! Most of the properties were copied from 
 # the device and are commented out for now until
@@ -49,7 +49,7 @@
 #ro.flyme.published = true
 # end build properties
 #
-# from device/ginreen/ginr6735_65c_l1/system.prop
+# from device/highscreen/prime_l/system.prop
 #
 #
 # system.prop for generic sdk
