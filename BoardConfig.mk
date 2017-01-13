@@ -6,21 +6,12 @@ BLOCK_BASED_OTA :=false
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
-FORCE_32_BIT = true
-
 # inherit from the proprietary version
 -include $(VENDOR_PATH)/BoardConfigVendor.mk
 
 TARGET_BOARD_PLATFORM := mt6735
 
 # Architecture
-ifeq ($(FORCE_32_BIT),true)
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a53
-else
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
@@ -32,7 +23,6 @@ TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
-endif
 
 TARGET_NO_BOOTLOADER := true
 TARGET_CPU_SMP := true
